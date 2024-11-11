@@ -1,0 +1,2 @@
+@HiltAndroidApp
+class CafeApplication : Application() 
