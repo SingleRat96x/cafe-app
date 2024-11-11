@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="CafeTheme">
+        <attr name="colorPrimarySurface" format="color"/>
+        <attr name="colorOnPrimarySurface" format="color"/>
+    </declare-styleable>
+</resources> 

@@ -1,4 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">Cafe</string>
+    <string name="error_loading">Error loading data</string>
+    <string name="retry">Retry</string>
+    <string name="empty_cart">Your cart is empty</string>
+    <string name="total">Total</string>
+    <string name="add_to_cart">Add to cart</string>
+    <string name="remove_from_cart">Remove from cart</string>
+    <string name="categories">Categories</string>
+    <string name="special_offers">Special Offers</string>
+    <string name="welcome_message">Welcome to Café!\nSip, Relax, Enjoy</string>
 </resources> 

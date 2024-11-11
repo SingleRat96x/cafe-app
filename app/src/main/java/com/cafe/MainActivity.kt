@@ -1,5 +1,28 @@
+import android.os.Bundle
+import androidx.activity.ComponentActivity
+import androidx.activity.compose.setContent
+import androidx.compose.foundation.layout.padding
+import androidx.compose.material.BottomNavigation
+import androidx.compose.material.BottomNavigationItem
+import androidx.compose.material.Icon
+import androidx.compose.material.Text
+import androidx.compose.material3.MaterialTheme
+import androidx.compose.material3.Scaffold
+import androidx.compose.runtime.*
+import androidx.compose.ui.Modifier
+import androidx.compose.ui.unit.dp
+import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
+import androidx.navigation.compose.*
+import androidx.navigation.NavGraph.Companion.findStartDestination
+import androidx.navigation.NavHostController
+import com.cafe.ui.screens.*
+import com.cafe.ui.theme.CafeTheme
+import dagger.hilt.android.AndroidEntryPoint
+
+@AndroidEntryPoint
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
+        installSplashScreen()
         super.onCreate(savedInstanceState)
         setContent {
             CafeTheme {
@@ -22,7 +45,7 @@ fun MainScreen() {
     Scaffold(
         bottomBar = {
             BottomNavigation(
-                backgroundColor = MaterialTheme.colors.surface,
+                backgroundColor = MaterialTheme.colorScheme.surface,
                 elevation = 8.dp
             ) {
                 val navBackStackEntry by navController.currentBackStackEntryAsState()
@@ -54,6 +77,12 @@ fun MainScreen() {
             composable(NavigationItem.Categories.route) { CategoriesScreen(navController) }
             composable(NavigationItem.Cart.route) { CartScreen(navController) }
             composable(NavigationItem.Orders.route) { OrdersScreen(navController) }
+            composable("categories/{category}") { backStackEntry ->
+                val category = backStackEntry.arguments?.getString("category")
+                if (category != null) {
+                    CategoriesScreen(navController)
+                }
+            }
         }
     }
 } 
