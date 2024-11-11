@@ -133,6 +133,7 @@ private fun CategoryCard(
                         MenuCategory.SANDWICHES -> R.drawable.category_sandwiches
                         MenuCategory.CHICHA -> R.drawable.category_chicha
                         MenuCategory.DESSERTS -> R.drawable.category_desserts
+                        else -> R.drawable.placeholder_food
                     }
                 ),
                 contentDescription = category.name,

@@ -19,6 +19,8 @@ import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.navigation.NavController
 import com.cafe.R
+import com.cafe.model.CartItem
+import com.cafe.model.MenuItem
 import com.cafe.viewmodel.CartViewModel
 
 @Composable
