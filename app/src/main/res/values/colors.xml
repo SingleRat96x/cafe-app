@@ -4,4 +4,5 @@
     <color name="secondary">#4CAF50</color>
     <color name="background">#FFFBFE</color>
     <color name="on_background">#1C1B1F</color>
+    <color name="ic_launcher_background">#795548</color>
 </resources> 
