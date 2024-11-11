@@ -1,3 +1,15 @@
+package com.cafe.viewmodel
+
+import androidx.lifecycle.ViewModel
+import androidx.lifecycle.viewModelScope
+import com.cafe.model.MenuItem
+import com.cafe.model.MenuCategory
+import dagger.hilt.android.lifecycle.HiltViewModel
+import kotlinx.coroutines.flow.MutableStateFlow
+import kotlinx.coroutines.flow.StateFlow
+import kotlinx.coroutines.flow.asStateFlow
+import javax.inject.Inject
+
 @HiltViewModel
 class MenuViewModel @Inject constructor() : ViewModel() {
     private val _menuItems = MutableStateFlow<List<MenuItem>>(emptyList())
