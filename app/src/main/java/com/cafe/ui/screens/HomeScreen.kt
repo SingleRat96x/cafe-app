@@ -1,6 +1,8 @@
 package com.cafe.ui.screens
 
 import androidx.compose.foundation.Image
+import androidx.compose.foundation.background
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.grid.GridCells
@@ -20,6 +22,7 @@ import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
 import com.cafe.R
 import com.cafe.model.MenuCategory
+import com.cafe.ui.components.SpecialOffersBanner
 
 @Composable
 fun HomeScreen(
